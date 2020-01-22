@@ -27,7 +27,10 @@ const carReducer = (state = initialState, action) => {
             return {
                 ...state,
                 additionalPrice: state.additionalPrice - featureToRemove.price,
-                features: state.car.features.filter(feat => feat.id !== action.payload)
+                car: {
+                    ...state.car,
+                    features: state.car.features.filter(feat => feat.id !== action.payload)
+                }
             };
         default:
             return state;
