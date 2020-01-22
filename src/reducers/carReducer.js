@@ -17,7 +17,10 @@ const carReducer = (state = initialState, action) => {
             return {
                 ...state,
                 additionalPrice: state.additionalPrice + action.payload.price,
-                features: [...state.car.features, action.payload]
+                car: {
+                    ...state.car,
+                    features: [...state.car.features, action.payload]
+                }
             };
         case REMOVE_FEATURE:
             const featureToRemove = state.car.features.find(feat => feat.id === action.payload);
