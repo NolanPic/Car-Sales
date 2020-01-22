@@ -19,10 +19,10 @@ const App = () => {
     <div className="boxes">
       <div className="box">
         <Header />
-        <AddedFeatures />
+        <AddedFeatures removeFeature={removeFeature} />
       </div>
       <div className="box">
-        <AdditionalFeatures />
+        <AdditionalFeatures buyItem={buyItem} />
         <Total />
       </div>
     </div>
