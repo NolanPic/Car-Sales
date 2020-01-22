@@ -1,8 +1,8 @@
 import React from 'react';
 import AdditionalFeature from './AdditionalFeature';
-import { connect, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-const AdditionalFeatures = props => {
+const AdditionalFeatures = () => {
 
   const additionalFeatures = useSelector(state => state.featuresReducer.additionalFeatures);
 

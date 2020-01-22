@@ -6,7 +6,6 @@ import AddedFeature from './AddedFeature';
 const AddedFeatures = () => {
 
   const car = useSelector(state => state.carReducer.car);
-  console.log('car', car);
 
   return (
     <div className="content">
